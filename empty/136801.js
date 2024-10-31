@@ -1,4 +1,5 @@
-var carouselHTML = `
+function initCarousel() {
+  var carouselHTML = `
             <div class="my-carousel-container">
                 <h2 class="carousel-header">Welcome to Our Art Gallery</h2>
                 <div class="my-carousel">
@@ -12,25 +13,26 @@ var carouselHTML = `
             </p>
         `;
 
-// Inject the carousel into the existing 'script-container' element
-var container = document.getElementById('script-container');
-if (container) {
-  container.innerHTML = carouselHTML;
+  // Inject the carousel into the existing 'script-container' element
+  var container = document.getElementById('script-container');
+  if (container) {
+    container.innerHTML = carouselHTML;
 
-  // Inject custom styles
-  injectCustomStyles();
+    // Inject custom styles
+    injectCustomStyles();
 
-  // Initialize the Slick Carousel
-  $('.my-carousel').slick({
-    dots: true,            // Show navigation dots
-    infinite: true,        // Infinite loop scrolling
-    speed: 500,            // Transition speed
-    slidesToShow: 1,       // Number of slides to show
-    autoplay: true,        // Enable autoplay
-    autoplaySpeed: 2000,   // Autoplay speed in milliseconds
-    arrows: true,          // Enable arrows
-    appendArrows: '.my-carousel-container'
-  });
-} else {
-  console.error('Element with ID "script-container" not found.');
+    // Initialize the Slick Carousel
+    $('.my-carousel').slick({
+      dots: true,            // Show navigation dots
+      infinite: true,        // Infinite loop scrolling
+      speed: 500,            // Transition speed
+      slidesToShow: 1,       // Number of slides to show
+      autoplay: true,        // Enable autoplay
+      autoplaySpeed: 2000,   // Autoplay speed in milliseconds
+      arrows: true,          // Enable arrows
+      appendArrows: '.my-carousel-container'
+    });
+  } else {
+    console.error('Element with ID "script-container" not found.');
+  }
 }
