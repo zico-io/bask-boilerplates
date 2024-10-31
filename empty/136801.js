@@ -1,4 +1,4 @@
-!function() {
+function initCarousel(){
   var carouselHTML = `
             <div class="my-carousel-container">
                 <h2 class="carousel-header">Welcome to Our Art Gallery</h2>
